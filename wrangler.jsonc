@@ -1,0 +1,35 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "mailclaw",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-07-15",
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "D1",
+			"database_name": "mailclaw-d1",
+			"database_id": "0f6f0f50-8c20-4d13-a6c2-aaf135be09dd",
+			"remote": true
+		}
+	],
+	"send_email": [
+		{
+			"name": "SEND_EMAIL",
+			"remote": true
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "ATTACHMENTS",
+			"bucket_name": "mailclaw-attachments",
+			"remote": true,"preview_bucket_name": "mailclaw-attachments"
+		}
+	],
+	"workers_dev": true,
+	"preview_urls": false,
+	"placement": {
+		"mode": "smart"
+	}
+}
